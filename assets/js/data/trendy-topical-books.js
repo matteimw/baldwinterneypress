@@ -53,4 +53,15 @@ const BOOKS = [
     icon: "💍",
     amazon: "https://amzn.to/4pXDXdX",
   },
+  {
+    // Evergreen guide, not tied to a 2026 news event like the four above —
+    // no publish-date signal, so it sits at the bottom rather than being
+    // guessed into the "latest on top" ordering.
+    title: 'The "COMP"rehensive Guide to Atlantic City',
+    author: "James Mattei",
+    description:
+      "How to vacation for free in AC. The “COMP”rehensive Guides instruct on getting the most out of your gambling experience on the Gulf Coast and Atlantic City. It shows the in's and out's of the COMP world and gives the novice player an advantage when going to the casinos. It contains easy-to-follow charts on Blackjack, video poker, and roulette.",
+    icon: "🎲",
+    amazon: "https://amzn.to/3xs8rJB",
+  },
 ];

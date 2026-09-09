@@ -65,4 +65,15 @@ const BOOKS = [
     icon: "🎲",
     amazon: "https://amzn.to/3xs8rJB",
   },
+  {
+    // Companion evergreen guide to the Atlantic City one above — same
+    // series, same "no publish-date signal" reasoning, sits at the bottom.
+    title: 'The "COMP"rehensive Guide to the Gulf Coast',
+    author: "James Mattei",
+    description:
+      "How to make the most of the Gulf Coast. The “COMP”rehensive Guide to the Gulf Coast is a guide to getting the most out of your gambling experience on the Gulf Coast. It shows the in's and out's of the COMP world and gives the novice player an advantage when going to the casinos on the Gulf Coast. It contains easy-to-follow charts on Blackjack, video poker, roulette, and more.",
+    cover: "assets/images/books/comp-guide-gulf-coast-cover.jpg",
+    icon: "🌴",
+    amazon: "https://amzn.to/4ytNoVE",
+  },
 ];

@@ -61,6 +61,7 @@ const BOOKS = [
     author: "James Mattei",
     description:
       "How to vacation for free in AC. The “COMP”rehensive Guides instruct on getting the most out of your gambling experience on the Gulf Coast and Atlantic City. It shows the in's and out's of the COMP world and gives the novice player an advantage when going to the casinos. It contains easy-to-follow charts on Blackjack, video poker, and roulette.",
+    cover: "assets/images/books/comp-guide-atlantic-city-cover.jpg",
     icon: "🎲",
     amazon: "https://amzn.to/3xs8rJB",
   },

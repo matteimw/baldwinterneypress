@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — Baldwin Terney Press</title>
+<meta name="description" content="Get in touch with Baldwin Terney Press." />
+<link rel="canonical" href="https://baldwinterneypress.com/contact.html" />
+<link rel="icon" type="image/png" href="assets/images/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="assets/images/brand/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="site-header"></header>
+
+<main id="main">
+  <section class="hero" style="padding-bottom:40px;">
+    <div class="wrap">
+      <span class="hero-badge">Get in Touch</span>
+      <h1>Contact Baldwin Terney Press</h1>
+      <p class="lead">Questions about a title, rights, review copies, or the Managed Security Buyers Guide News series — we'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="contact-box">
+      <h2>Send us an email</h2>
+      <p>We read every message and reply as quickly as we can.</p>
+      <div class="contact-methods">
+        <a class="btn btn-primary" data-contact-email="href" href="#"><span data-contact-email="text">✉️ Email Us</span></a>
+      </div>
+      <div class="footer-social" style="justify-content:center; margin-top:18px;">
+        <a href="https://www.facebook.com/baldwin.terneypress" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/baldwinterneypress/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('[data-contact-email="text"]').forEach((el) => {
+      el.textContent = "✉️ " + SITE_CONFIG.contactEmail;
+    });
+  });
+</script>
+</body>
+</html>

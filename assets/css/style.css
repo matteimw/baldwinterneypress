@@ -1,0 +1,512 @@
+/* ============================================================
+   Baldwin Terney Press — site styles
+   All colors/fonts are CSS variables here — edit these to re-theme.
+   Palette: warm paper / literary ink, with a steel-blue accent used
+   only on the Managed Security Buyers Guide News content so that
+   line reads as "for business buyers" while staying one family.
+   ============================================================ */
+
+:root {
+  /* Palette — warm paper, ink, terracotta */
+  --bg: #fbf6ee;
+  --bg-alt: #f3e7d6;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fffdf9;
+  --border: #e6d7bf;
+  --border-light: #d8c4a3;
+
+  --text: #2b2117;
+  --text-muted: #5c4d3c;
+  --text-faint: #8a7a64;
+
+  --accent: #a8432f;        /* terracotta ink-stamp — primary brand accent */
+  --accent-strong: #8a3423;
+  --accent-dim: rgba(168, 67, 47, 0.1);
+
+  --biz: #2c5170;           /* steel-blue — used only for MSS Buyers Guide badges/accents */
+  --biz-strong: #1d3a52;
+  --biz-dim: rgba(44, 81, 112, 0.1);
+
+  --gold: #c79a49;
+  --success: #4a7c4e;
+
+  --font-heading: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow-card: 0 4px 20px rgba(43, 33, 23, 0.08);
+  --max-width: 1160px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--text);
+  line-height: 1.18;
+  margin: 0 0 0.5em;
+  font-weight: 600;
+}
+
+h1 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.01em; }
+h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); }
+h3 { font-size: 1.2rem; }
+
+p { margin: 0 0 1em; color: var(--text-muted); }
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-strong); }
+
+img { max-width: 100%; display: block; }
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 16px;
+  z-index: 100;
+  font-weight: 600;
+  border-radius: 0 0 6px 0;
+}
+.skip-link:focus { left: 0; top: 0; }
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(251, 246, 238, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--text);
+  font-size: 1.08rem;
+  white-space: nowrap;
+}
+.brand-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: url('../images/brand/btp-mark.png') center/cover no-repeat;
+  flex-shrink: 0;
+}
+.brand small {
+  display: block;
+  font-weight: 500;
+  font-size: 0.66rem;
+  color: var(--text-faint);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+.main-nav a {
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 8px 13px;
+  border-radius: var(--radius-sm);
+}
+.main-nav a:hover { color: var(--text); background: var(--bg-alt); }
+.main-nav a.active { color: var(--accent); }
+.header-cta { flex-shrink: 0; }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border-light);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: var(--font-body);
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-strong); color: #fff; }
+.btn-outline { background: transparent; border-color: var(--border-light); color: var(--text); }
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+.btn-biz { background: var(--biz); color: #fff; }
+.btn-biz:hover { background: var(--biz-strong); color: #fff; }
+.btn-amazon { background: #f0a731; color: #10233a; }
+.btn-amazon:hover { background: #e0961f; }
+.btn-sm { padding: 8px 16px; font-size: 0.85rem; }
+.btn-block { width: 100%; justify-content: center; }
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 72px 0 56px;
+  background:
+    radial-gradient(ellipse 60% 60% at 85% -10%, rgba(168, 67, 47, 0.08), transparent),
+    var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--accent-dim);
+  border: 1px solid rgba(168, 67, 47, 0.25);
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.hero-badge.biz { background: var(--biz-dim); border-color: rgba(44,81,112,0.25); color: var(--biz); }
+.hero .lead { font-size: 1.1rem; color: var(--text-muted); max-width: 56ch; }
+.hero-cta { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
+.hero-meta { display: flex; gap: 22px; margin-top: 30px; flex-wrap: wrap; }
+.hero-meta div { font-size: 0.84rem; color: var(--text-faint); }
+.hero-meta strong { display: block; color: var(--text); font-size: 1.25rem; font-family: var(--font-heading); }
+
+.hero-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+.hero-panel h3 { font-size: 1.05rem; margin-bottom: 14px; }
+.hero-panel ul { margin: 0; padding: 0; list-style: none; }
+.hero-panel li {
+  display: flex; gap: 10px; padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted); font-size: 0.92rem;
+}
+.hero-panel li:last-child { border-bottom: none; }
+.hero-panel li::before { content: "✓"; color: var(--accent); font-weight: 800; flex-shrink: 0; }
+
+.hero-art { display: flex; align-items: center; justify-content: center; }
+.hero-art img { max-height: 260px; width: auto; margin: 0 auto; }
+
+/* ---------- Disclosure banner ---------- */
+.disclosure-banner {
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  text-align: center;
+}
+
+/* ---------- Sections ---------- */
+.section { padding: 68px 0; max-width: var(--max-width); margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+.section.alt { background: var(--bg-alt); max-width: none; padding-left: 0; padding-right: 0; }
+.section.alt > .wrap { padding-top: 68px; padding-bottom: 68px; }
+.section.tight { padding-top: 36px; padding-bottom: 36px; }
+
+.section-head {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  gap: 24px; margin-bottom: 34px; flex-wrap: wrap;
+}
+.eyebrow {
+  color: var(--accent); font-weight: 700; font-size: 0.78rem;
+  letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 8px;
+}
+.eyebrow.biz { color: var(--biz); }
+.section-head p { max-width: 60ch; margin: 0; }
+.text-center { text-align: center; }
+.mt-lg { margin-top: 40px; }
+
+/* ---------- Grids & Cards ---------- */
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.grid-tight { gap: 18px; }
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.card:hover { border-color: var(--border-light); }
+.card .icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  background: var(--accent-dim); display: flex; align-items: center;
+  justify-content: center; font-size: 1.3rem; margin-bottom: 16px;
+}
+/* Small real-image variant of .icon (About page: book cover / mascot
+   thumbnails instead of an emoji). object-fit: contain so a cropped corner
+   of a face or a mascot's head never gets clipped at this tiny size. */
+.card .icon.icon-img { background: var(--bg-alt); overflow: hidden; padding: 3px; }
+.card .icon.icon-img img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.card h3 { margin-bottom: 8px; }
+.card p { margin-bottom: 0; font-size: 0.94rem; }
+
+/* ---------- Book cards ---------- */
+.book-card {
+  display: flex; gap: 24px; align-items: flex-start;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 22px;
+}
+/* book-main stacks the cover on top (bigger, centered) with the title,
+   description and Amazon button below it — filling the width available
+   next to the PayPal column instead of splitting it into two side-by-side
+   strips. */
+.book-main {
+  display: flex; flex-direction: column; align-items: center;
+  flex: 1; min-width: 0; text-align: center;
+}
+.book-thumb {
+  width: 340px; max-width: 100%; height: auto; border-radius: 6px;
+  margin: 0 auto 20px;
+  box-shadow: 0 3px 10px rgba(43,33,23,0.15);
+  border: 1px solid var(--border);
+}
+.book-thumb.placeholder {
+  width: 340px; max-width: 100%; height: 420px; display: flex; align-items: center;
+  justify-content: center; background: var(--bg-alt); font-size: 3.2rem;
+  color: var(--text-faint); text-align: center; margin: 0 auto 20px;
+}
+.book-info { width: 100%; }
+.book-card h3, .book-card h4 { margin-bottom: 6px; font-size: 1.35rem; }
+.book-card .book-meta { font-size: 0.85rem; color: var(--text-faint); margin-bottom: 10px; }
+.book-card .book-info p {
+  font-size: 1.08rem; line-height: 1.7; text-align: left;
+  max-width: 62ch; margin-left: auto; margin-right: auto;
+}
+.book-card .card-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 12px; }
+
+/* PayPal "buy direct" column — sits to the right of the cover/description,
+   as its own visually separated block. align-self is flex-start (not
+   stretch) so this column doesn't stretch to the card's full height.
+
+   IMPORTANT: the PayPal Hosted Button renders inside a cross-origin
+   <iframe> that PayPal's own SDK injects — its content (title, price,
+   product details) is controlled by how the button was set up on
+   paypal.com, and our CSS cannot reach inside that iframe to restyle it.
+   If the button was created with a full product description (not just a
+   name + price), that whole card renders as-is. Squeezing this column
+   too narrow just forces PayPal's own text to wrap onto many lines,
+   which is what produced the "long thin slice" look — it wasn't the
+   align-self stretch bug. Giving it real width lets PayPal's widget lay
+   itself out in a compact, readable box instead. If it's still too tall,
+   the fix is on paypal.com (Pay & Get Paid -> Buttons -> edit this
+   button -> trim the item name/description down to just the title and
+   price), not in this stylesheet. */
+.paypal-col {
+  flex-shrink: 0;
+  width: 280px;
+  padding-left: 18px;
+  border-left: 1px solid var(--border);
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+.paypal-buy-label { font-size: 0.72rem; color: var(--text-faint); margin-bottom: 4px; }
+
+.book-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+
+/* ---------- News issue list (Managed Security Buyers Guide) ---------- */
+.news-issue-list { display: flex; flex-direction: column; gap: 18px; }
+.news-issue { border-left: 3px solid var(--biz); }
+/* Buyers Guide News covers at 75% of the general .book-thumb size (340px -> 255px). */
+.news-issue .book-thumb { width: 255px; }
+.news-issue .book-thumb.placeholder { width: 255px; height: 315px; }
+.issue-tag {
+  font-size: 0.78rem; font-weight: 700; color: var(--biz);
+  text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 6px;
+}
+.latest-pill {
+  background: var(--biz); color: #fff; font-size: 0.66rem;
+  padding: 2px 8px; border-radius: 999px; margin-left: 8px;
+  text-transform: uppercase; letter-spacing: 0.03em; vertical-align: middle;
+}
+
+/* ---------- Bio ---------- */
+.bio-layout { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 40px; align-items: start; }
+.bio-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px; text-align: center;
+}
+.bio-avatar {
+  width: 100px; height: 100px; border-radius: 50%; overflow: hidden;
+  margin: 0 auto 16px; border: 3px solid var(--bg-alt);
+}
+.bio-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.bio-card .role { font-size: 0.85rem; color: var(--text-faint); margin: 4px 0 14px; }
+.bio-card p { font-size: 0.92rem; line-height: 1.65; color: var(--text-muted); margin-top: 6px; }
+.bio-links { display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem; }
+
+/* Three author bio cards (About page) — same .bio-card look as the old
+   single founder card, just three across. */
+.author-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
+
+/* ---------- Family / cross-promo strip ---------- */
+.family-strip { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 36px 0; }
+.family-card {
+  display: flex; align-items: center; gap: 20px; max-width: var(--max-width);
+  margin: 0 auto; padding: 0 24px; flex-wrap: wrap;
+}
+.family-card img { width: 84px; height: auto; flex-shrink: 0; }
+.family-card .btn { flex-shrink: 0; }
+
+/* ---------- Contact box ---------- */
+.contact-box {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 44px; text-align: center;
+  max-width: 720px; margin: 0 auto;
+}
+.contact-box h2 { margin-bottom: 10px; }
+.contact-methods { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+
+.address-block { font-size: 0.92rem; color: var(--text-muted); margin-top: 18px; }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--bg-alt); border-top: 1px solid var(--border); padding: 40px 0 28px; }
+.footer-inner {
+  max-width: var(--max-width); margin: 0 auto; padding: 0 24px;
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 24px; flex-wrap: wrap;
+}
+.footer-note { font-size: 0.82rem; color: var(--text-faint); margin: 6px 0 0; }
+.footer-links { display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.88rem; }
+.footer-social { display: flex; gap: 14px; margin-top: 10px; }
+.footer-bottom {
+  max-width: var(--max-width); margin: 24px auto 0; padding: 18px 24px 0;
+  border-top: 1px solid var(--border); font-size: 0.76rem; color: var(--text-faint);
+}
+
+/* ---------- Bottom scrolling promo bar (Amazon Kindle free trial) ----------
+   Injected by main.js (renderPromoBar) on every page — see that file to
+   change wording or links. Fixed to the bottom of the viewport, above
+   everything else; .has-promo-bar (added to <body> alongside it) pads the
+   page content so the fixed bar never covers the footer. */
+body.has-promo-bar { padding-bottom: 46px; }
+#promo-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 500;
+  display: flex; align-items: center; gap: 16px;
+  background: var(--biz-strong); color: #fff;
+  padding: 8px 16px; font-size: 0.85rem;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.15);
+}
+#promo-bar .promo-track { flex: 1; overflow: hidden; white-space: nowrap; }
+#promo-bar .promo-scroll {
+  display: inline-block; white-space: nowrap;
+  animation: promo-scroll 26s linear infinite;
+}
+@keyframes promo-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+#promo-bar .promo-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+#promo-bar .promo-btn {
+  padding: 7px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600;
+  white-space: nowrap; text-decoration: none;
+}
+#promo-bar .promo-btn.trial { background: #f2994a; color: #1a1207; }
+#promo-bar .promo-btn.shop { background: #2fd6b0; color: #08302a; }
+#promo-bar .promo-close {
+  background: none; border: none; color: rgba(255,255,255,0.7);
+  font-size: 1.1rem; line-height: 1; cursor: pointer; padding: 0 2px;
+}
+#promo-bar .promo-close:hover { color: #fff; }
+@media (max-width: 640px) {
+  body.has-promo-bar { padding-bottom: 40px; }
+  #promo-bar { font-size: 0.72rem; gap: 8px; padding: 6px 10px; }
+  #promo-bar .promo-btn { padding: 5px 9px; font-size: 0.68rem; }
+  #promo-bar .promo-btn.shop { display: none; } /* keep the bar from overflowing on narrow phones */
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-art { order: -1; }
+  .bio-layout { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .author-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 860px) {
+  .main-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); flex-direction: column; padding: 8px; }
+  .main-nav.open { display: flex; }
+  .nav-toggle { display: inline-flex; }
+  .header-inner { position: relative; }
+  /* At this width there isn't room for cover + description + a 280px-wide
+     PayPal box side by side without squeezing the description down to a
+     sliver, so drop the PayPal box below instead (same treatment as the
+     640px mobile rule, just kicking in earlier). */
+  .book-card { flex-wrap: wrap; }
+  .paypal-col {
+    width: 100%; padding-left: 0; padding-top: 16px; margin-top: 4px;
+    border-left: none; border-top: 1px solid var(--border);
+  }
+}
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: 1fr; }
+  .book-card { flex-direction: column; }
+  .book-thumb, .book-thumb.placeholder { width: 100%; max-width: 300px; }
+  .news-issue .book-thumb, .news-issue .book-thumb.placeholder { max-width: 225px; }
+  .paypal-col {
+    width: 100%; padding-left: 0; padding-top: 16px; margin-top: 4px;
+    border-left: none; border-top: 1px solid var(--border);
+  }
+  .footer-inner { flex-direction: column; }
+}

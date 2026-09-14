@@ -11,6 +11,16 @@ const SITE_CONFIG = {
   // amzn.to links below already carry their own affiliate tracking and are
   // used exactly as pasted — see README.md if you ever need to add a plain
   // amazon.com link and want the default Associates tag appended instead.
+
+  // ---- MailerLite email signup ----
+  // Account ID is fixed (your MailerLite account).
+  // mailerLiteFormId: after verifying your MailerLite email and creating an
+  // embedded form in the MailerLite dashboard, paste the form ID here.
+  // The form ID looks like "abc123XY" and appears in the embed snippet
+  // MailerLite gives you (the data-form="..." value).
+  // Leave mailerLiteFormId as "" to show a "Contact us" fallback instead.
+  mailerLiteAccountId: "2635532",
+  mailerLiteFormId: "",        // ← paste form ID here after creating form in MailerLite
 };
 
 const NAV_LINKS = [

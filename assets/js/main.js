@@ -73,10 +73,64 @@ function renderFooter() {
   `;
 }
 
+/* ---- MailerLite email signup ----
+   Injects the MailerLite Universal script once per page load, then renders
+   a signup section immediately above the footer. The form itself is hosted
+   by MailerLite — nothing to keep in sync on this site.
+
+   To activate: verify your MailerLite email, create an embedded form in the
+   MailerLite dashboard, then paste its form ID into mailerLiteFormId in
+   config.js. Until then, visitors see a "contact us" fallback link. */
+function initMailerLite() {
+  if (!SITE_CONFIG.mailerLiteAccountId) return;
+  /* Standard MailerLite Universal snippet — queues calls before the async
+     script finishes loading, so ml('account',…) fires correctly either way. */
+  (function (w, d, e, u, f, l, n) {
+    w[f] = w[f] || function () { (w[f].q = w[f].q || []).push(arguments); };
+    l = d.createElement(e); l.async = 1; l.src = u;
+    n = d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l, n);
+  })(window, document, 'script',
+     'https://assets.mailerlite.com/js/universal.js', 'ml');
+  window.ml('account', SITE_CONFIG.mailerLiteAccountId);
+}
+
+function renderSignupSection() {
+  const footer = document.getElementById('site-footer');
+  if (!footer) return;
+
+  const formHtml = SITE_CONFIG.mailerLiteFormId
+    ? `<div class="ml-embedded" data-form="${SITE_CONFIG.mailerLiteFormId}"></div>`
+    : `<div class="signup-fallback">
+         <p>Want to hear about new releases first?</p>
+         <a class="btn btn-primary" href="contact.html">✉️ Get in touch to join the list</a>
+       </div>`;
+
+  const section = document.createElement('section');
+  section.className = 'signup-section';
+  section.id = 'signup';
+  section.innerHTML = `
+    <div class="signup-inner">
+      <div class="signup-text">
+        <div class="eyebrow">Stay in the loop</div>
+        <h2>New books &amp; issues, straight to your inbox</h2>
+        <p>Be the first to know when new children's books, curriculum resources,
+           and Managed Security Buyers Guide issues are released.
+           No spam — just new releases.</p>
+      </div>
+      <div class="signup-form-wrap">
+        ${formHtml}
+      </div>
+    </div>
+  `;
+  footer.parentNode.insertBefore(section, footer);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderHeader();
   renderFooter();
   renderPromoBar();
+  initMailerLite();
+  renderSignupSection();
   document.querySelectorAll("[data-contact-email]").forEach((el) => {
     el.href = `mailto:${SITE_CONFIG.contactEmail}`;
     if (el.dataset.contactEmail === "text") el.textContent = SITE_CONFIG.contactEmail;

@@ -500,6 +500,45 @@ body.has-promo-bar { padding-bottom: 46px; }
   #promo-bar .promo-btn.shop { display: none; } /* keep the bar from overflowing on narrow phones */
 }
 
+
+/* ---------- Email signup section ----------
+   Rendered by main.js (renderSignupSection) on every page, immediately
+   above the footer. When mailerLiteFormId is set in config.js, MailerLite
+   renders its branded form inside .ml-embedded; otherwise a "contact us"
+   fallback link is shown. */
+.signup-section {
+  background: linear-gradient(150deg, var(--bg-alt) 0%, var(--bg) 100%);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 60px 24px;
+}
+.signup-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.signup-text .eyebrow { margin-bottom: 10px; }
+.signup-text h2 { margin-bottom: 12px; }
+.signup-text p {
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  max-width: 44ch;
+  line-height: 1.65;
+  margin: 0;
+}
+.signup-fallback { text-align: center; }
+.signup-fallback p { color: var(--text-muted); margin-bottom: 16px; }
+/* Let MailerLite's own form styles do the heavy lifting inside .ml-embedded;
+   just zero out the wrapper's default padding so it aligns with the grid. */
+.signup-form-wrap .ml-embedded { margin: 0; }
+@media (max-width: 720px) {
+  .signup-inner { grid-template-columns: 1fr; gap: 28px; }
+  .signup-text p { max-width: none; }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 980px) {
   .hero-inner { grid-template-columns: 1fr; }

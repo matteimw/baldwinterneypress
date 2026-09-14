@@ -20,7 +20,7 @@ const SITE_CONFIG = {
   // MailerLite gives you (the data-form="..." value).
   // Leave mailerLiteFormId as "" to show a "Contact us" fallback instead.
   mailerLiteAccountId: "2635532",
-  mailerLiteFormId: "",        // ← paste form ID here after creating form in MailerLite
+  mailerLiteFormId: "eX66qv",
 };
 
 const NAV_LINKS = [

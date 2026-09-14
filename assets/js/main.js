@@ -155,6 +155,23 @@ function bookCoverBlock(b) {
   return `<div class="book-thumb placeholder">${b.icon || "📖"}</div>`;
 }
 
+/* Renders IngramSpark direct-purchase buttons when a book has ingramLinks.
+   Each entry: { label, price, url } → one green "📦 Paperback — $12.99 + shipping" button. */
+function ingramSection(b) {
+  if (!b.ingramLinks || !b.ingramLinks.length) return "";
+  const btns = b.ingramLinks
+    .map(
+      (il) =>
+        `<a class="btn btn-ingram btn-sm" href="${il.url}" target="_blank" rel="noopener">📦 ${il.label} — ${il.price}</a>`
+    )
+    .join("");
+  return `
+    <div class="ingram-section">
+      <div class="ingram-label">Buy direct from IngramSpark</div>
+      <div class="ingram-btns">${btns}</div>
+    </div>`;
+}
+
 function renderBooks(limit) {
   const mount = document.getElementById("books-grid");
   if (!mount) return;
@@ -171,6 +188,7 @@ function renderBooks(limit) {
             <a class="btn btn-amazon btn-sm" href="${b.amazon}" target="_blank" rel="nofollow sponsored noopener">🛒 Buy on Amazon</a>
             ${b.otherLink ? `<a class="btn btn-outline btn-sm" href="${b.otherLink}" target="_blank" rel="noopener">${b.otherLinkLabel || "Also available"}</a>` : ""}
           </div>
+          ${ingramSection(b)}
         </div>
       </div>
       ${b.paypal ? `

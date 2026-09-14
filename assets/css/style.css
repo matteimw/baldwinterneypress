@@ -184,6 +184,9 @@ img { max-width: 100%; display: block; }
 .btn-amazon:hover { background: #e0961f; }
 .btn-sm { padding: 8px 16px; font-size: 0.85rem; }
 .btn-block { width: 100%; justify-content: center; }
+/* IngramSpark direct-purchase button — forest green "published print" feel */
+.btn-ingram { background: var(--success); color: #fff; }
+.btn-ingram:hover { background: #3a6340; color: #fff; }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -361,6 +364,30 @@ img { max-width: 100%; display: block; }
 .paypal-buy-label { font-size: 0.72rem; color: var(--text-faint); margin-bottom: 4px; }
 
 .book-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+
+/* IngramSpark direct-purchase section — sits below the Amazon/other-link
+   buttons, separated by a top border so it reads as a distinct option block.
+   Two green buttons (Paperback / Hard Cover) with label above. */
+.ingram-section {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.ingram-label {
+  font-size: 0.75rem;
+  color: var(--text-faint);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.ingram-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 /* ---------- News issue list (Managed Security Buyers Guide) ---------- */
 .news-issue-list { display: flex; flex-direction: column; gap: 18px; }

@@ -11,6 +11,15 @@
 
 const MSSP_ISSUES = [
   {
+    issue: 9,
+    dateRange: "Week of Sep 5–11, 2026",
+    title: "If Washington Just Stopped Checking Your Defenses, Who Is?",
+    summary:
+      "CISA quietly ended six free cybersecurity assessment services for critical infrastructure operators — the hands-on risk reviews small water utilities and rural electric cooperatives relied on when a paid assessment wasn’t in the budget. The same week, Accenture’s $4.175 billion acquisition of Dragos, runZero, and NetRise moved toward close, raising a direct question for any buyer whose OT vendor was just majority-acquired by one of the world’s largest systems integrators.",
+    cover: "assets/images/books/msbg-news-issue-9-cover.jpg",
+    amazon: "https://link.amazon/B05c5TR3Y",
+  },
+  {
     issue: 8,
     dateRange: "Week of Aug 29 – Sep 4, 2026",
     title:

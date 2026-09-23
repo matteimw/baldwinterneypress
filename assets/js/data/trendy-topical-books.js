@@ -9,6 +9,7 @@
 
    Ordered newest release first (per Mark's "put latest on top"), using
    the "Prepared:" / event dates on each book's own KDP metadata sheet:
+     The Chatbot Crisis             — added 2026-09-23 (newest)
      Manufactured Monsters          — prepared 2026-09-08
      The Machines That Let Themselves In — published within days of the
                                       Jul 22 / Jul 30-31 2026 AI-hacking
@@ -19,6 +20,15 @@
    ============================================================ */
 
 const BOOKS = [
+  {
+    title: "The Chatbot Crisis",
+    author: "Mark Mattei",
+    description:
+      "AI chatbots are talking to your kids. Nobody's stopping them. <i>The Chatbot Crisis</i> is an independent analysis of how AI companions are failing America's teens, and how Big Tech is rigging the rules meant to stop them.",
+    cover: "assets/images/books/the-chatbot-crisis-cover.jpg",
+    icon: "🤖",
+    amazon: "https://link.amazon/B0cXdD3HA",
+  },
   {
     title: "Manufactured Monsters",
     author: "Mark Mattei",

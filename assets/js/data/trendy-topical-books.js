@@ -9,7 +9,8 @@
 
    Ordered newest release first (per Mark's "put latest on top"), using
    the "Prepared:" / event dates on each book's own KDP metadata sheet:
-     The Chatbot Crisis             — added 2026-09-23 (newest)
+     Hiring an AI Engineer          — added 2026-09-29 (newest)
+     The Chatbot Crisis             — added 2026-09-23
      Manufactured Monsters          — prepared 2026-09-08
      The Machines That Let Themselves In — published within days of the
                                       Jul 22 / Jul 30-31 2026 AI-hacking
@@ -20,6 +21,15 @@
    ============================================================ */
 
 const BOOKS = [
+  {
+    title: "The Small Business Guide to Hiring an AI Engineer",
+    author: "Mark W. Mattei",
+    description:
+      "How to understand AI agents, and safely bring on the person who will build and secure AI for your business. A plain-English guide for owners: where the pieces of an AI agent actually live, why your business must own the logins, how scoped keys and least privilege keep each connection in its lane, and how to keep a kill switch in your own hands, no engineer required.",
+    cover: "assets/images/books/hiring-an-ai-engineer-cover.jpg",
+    icon: "🧠",
+    amazon: "https://link.amazon/B0ctXjJWY",
+  },
   {
     title: "The Chatbot Crisis",
     author: "Mark Mattei",

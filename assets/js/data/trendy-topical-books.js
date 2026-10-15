@@ -29,6 +29,13 @@ const BOOKS = [
     cover: "assets/images/books/hiring-an-ai-engineer-cover.jpg",
     icon: "🧠",
     amazon: "https://link.amazon/B0ctXjJWY",
+    ingramLinks: [
+      {
+        label: "Paperback",
+        price: "$11.99 + shipping",
+        url: "https://shop.ingramspark.com/b/084?params=sVSYZE0Z5LyEf12DgVUa9gewIXDFNUKrWQd8O8hMytB",
+      },
+    ],
   },
   {
     title: "The Chatbot Crisis",

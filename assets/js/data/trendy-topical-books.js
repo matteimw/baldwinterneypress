@@ -70,6 +70,7 @@ const BOOKS = [
     author: "Mark Mattei",
     description:
       "Inside Taylor Swift and Travis Kelce's big day — and what it reveals about fame in the algorithm age. On July 3, 2026, the couple married at Madison Square Garden with no press and NDAs for every guest — and still became the most-talked-about story on the internet that week. A sharp look at how engineered secrecy outperformed a press release.",
+    cover: "assets/images/books/the-wedding-that-broke-the-internet-cover.jpg",
     icon: "💍",
     amazon: "https://amzn.to/4pXDXdX",
   },

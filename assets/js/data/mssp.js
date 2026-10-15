@@ -3,13 +3,52 @@
    By Mark W. Mattei, LTC (USA, Ret.)
 
    Newest issue first (that's also what shows the "Latest" pill).
-   To add Issue 9: copy the block below, fill it in, and paste it
+   To add the next issue: copy the block below, fill it in, and paste it
    at the TOP of this array — drop the cover image at
-   assets/images/books/msbg-news-issue-9-cover.jpg (or point `cover`
+   assets/images/books/msbg-news-issue-N-cover.jpg (or point `cover`
    wherever you saved it).
    ============================================================ */
 
 const MSSP_ISSUES = [
+  {
+    issue: 13,
+    dateRange: "Week of Oct 4–10, 2026",
+    title:
+      "When Hackers Breach a Tanker’s Propulsion System at Sea, Does Your OT Managed Security Contract Define Who Responds?",
+    summary:
+      "Attackers reaching a tanker’s propulsion system at sea puts maritime OT squarely in scope. This issue asks buyers whether their OT managed security contract actually defines who responds when the compromised system is a ship underway.",
+    cover: "assets/images/books/msbg-news-issue-13-cover.jpg",
+    amazon: "https://link.amazon/B0fX6MKBg",
+  },
+  {
+    issue: 12,
+    dateRange: "Week of Sep 26 – Oct 3, 2026",
+    title:
+      "When AI Runs the Ransomware Attack End to End, Can You or Your MSSP Actively Respond to Stop It?",
+    summary:
+      "AI can now run a ransomware attack end to end, at machine speed. The question for buyers: can you — or your MSSP — actively respond fast enough to stop it, or only report on it afterward?",
+    cover: "assets/images/books/msbg-news-issue-12-cover.jpg",
+    amazon: "https://link.amazon/B0784tq27",
+  },
+  {
+    issue: 11,
+    dateRange: "Week of Sep 19–25, 2026",
+    title:
+      "Non-Human Identities Are Now the Top Attack Path: Is Your MSSP Monitoring Credentials Its Own AI Agents Create?",
+    summary:
+      "Non-human identities — service accounts, API keys, tokens, and the credentials AI agents create for themselves — are now the top attack path. The question for buyers: is your MSSP actually monitoring the credentials its own AI agents create?",
+    cover: "assets/images/books/msbg-news-issue-11-cover.jpg",
+    amazon: "https://link.amazon/B0eXs726k",
+  },
+  {
+    issue: 10,
+    dateRange: "Week of Sep 12–18, 2026",
+    title: "After Ransomware Learned to Hunt AI Models, What Does Your MSSP Contract Actually Cover?",
+    summary:
+      "Ransomware has learned to go after AI models. This issue asks what that means for buyers — and what your MSSP contract actually covers when the target is your AI.",
+    cover: "assets/images/books/msbg-news-issue-10-cover.jpg",
+    amazon: "https://link.amazon/B0hkSmy9B",
+  },
   {
     issue: 9,
     dateRange: "Week of Sep 5–11, 2026",

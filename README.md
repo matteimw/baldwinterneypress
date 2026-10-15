@@ -11,7 +11,7 @@ familiar.
 ```
 index.html                     Home page — both lines of business, MSS Buyers Guide teaser, About, Cyber Elementary cross-link, Contact
 books.html                     General catalog: the milk books + The "COMP"rehensive Guide
-managed-security-buyers.html   All 8 issues of Managed Security Buyers Guide News + author bio
+managed-security-buyers.html   All issues of Managed Security Buyers Guide News + author bio
 about.html                     Full About Us + founder note + Cyber Elementary
 contact.html                   Contact info (mailto — this is a static site, no server-side form)
 privacy-policy.html            Basic privacy policy + affiliate disclosure
@@ -31,7 +31,7 @@ assets/images/mascot/          Cyber Elementary's Choco mascot (used on the cros
 
 ## Adding a new Managed Security Buyers Guide News issue
 
-Edit `assets/js/data/mssp.js`. Copy the block for Issue 8, paste it **above** it
+Edit `assets/js/data/mssp.js`. Copy the block for the newest issue, paste it **above** it
 (newest issue goes first — that's also what puts the "Latest" pill on it), and
 fill in:
 
@@ -96,7 +96,7 @@ works normally, nothing breaks.
 
 Covers for **I Need Strawberry Milk!** and **The "COMP"rehensive Guide** aren't
 in your local folders yet, so those two cards currently fall back to an emoji
-placeholder. Everything else (the chocolate milk cover, all 8 Buyers Guide News
+placeholder. Everything else (the chocolate milk cover, all Buyers Guide News
 covers, the founder headshot, the Cyber Elementary mascot) was pulled from your
 existing site folders and is already wired in.
 

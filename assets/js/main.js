@@ -240,6 +240,7 @@ function renderBooks(limit) {
           ${b.description ? `<p>${b.description}</p>` : ""}
           <div class="card-actions">
             <a class="btn btn-amazon btn-sm" href="${b.amazon}" target="_blank" rel="nofollow sponsored noopener">🛒 Buy on Amazon</a>
+            ${b.spotify ? `<a class="btn btn-spotify btn-sm" href="${b.spotify}" target="_blank" rel="noopener">🎧 Listen on Spotify</a>` : ""}
             ${b.otherLink ? `<a class="btn btn-outline btn-sm" href="${b.otherLink}" target="_blank" rel="noopener">${b.otherLinkLabel || "Also available"}</a>` : ""}
           </div>
           ${ingramSection(b)}

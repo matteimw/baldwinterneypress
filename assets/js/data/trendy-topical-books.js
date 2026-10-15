@@ -6,6 +6,8 @@
    only loads this file, never books.js, so there's no name clash.
    See books.js for the full field reference (title, author, description,
    cover, icon, amazon, otherLink, otherLinkLabel, paypal).
+   Optional `spotify` field: URL of the book's Spotify podcast show —
+   renders a green "🎧 Listen on Spotify" button next to Amazon.
 
    Ordered newest release first (per Mark's "put latest on top"), using
    the "Prepared:" / event dates on each book's own KDP metadata sheet:
@@ -29,6 +31,7 @@ const BOOKS = [
     cover: "assets/images/books/hiring-an-ai-engineer-cover.jpg",
     icon: "🧠",
     amazon: "https://link.amazon/B0ctXjJWY",
+    spotify: "https://open.spotify.com/show/0iirqyjeprouNGnt82JcCy",
     ingramLinks: [
       {
         label: "Paperback",
@@ -54,6 +57,7 @@ const BOOKS = [
     cover: "assets/images/books/manufactured-monsters-cover.jpg",
     icon: "👾",
     amazon: "https://amzn.to/4iSv3Nh",
+    spotify: "https://open.spotify.com/show/4Nubgd5szOOWHLMOjI9epb",
   },
   {
     title: "The Machines That Let Themselves In",
@@ -80,6 +84,7 @@ const BOOKS = [
     cover: "assets/images/books/the-wedding-that-broke-the-internet-cover.jpg",
     icon: "💍",
     amazon: "https://amzn.to/4pXDXdX",
+    spotify: "https://open.spotify.com/show/2sBrmmPHw4vO70cuLtrImW",
   },
   {
     // Evergreen guide, not tied to a 2026 news event like the four above —

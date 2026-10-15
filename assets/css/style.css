@@ -187,6 +187,9 @@ img { max-width: 100%; display: block; }
 /* IngramSpark direct-purchase button — forest green "published print" feel */
 .btn-ingram { background: var(--success); color: #fff; }
 .btn-ingram:hover { background: #3a6340; color: #fff; }
+/* Spotify podcast button — Spotify green with dark text (white on this green fails contrast) */
+.btn-spotify { background: #1ed760; color: #121212; }
+.btn-spotify:hover { background: #1db954; color: #121212; }
 
 /* ---------- Hero ---------- */
 .hero {

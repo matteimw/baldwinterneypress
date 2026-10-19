@@ -11,6 +11,16 @@
 
 const MSSP_ISSUES = [
   {
+    issue: 14,
+    dateRange: "Week of Oct 11–17, 2026",
+    title:
+      "Does Your OT MSSP Scope Cover Setpoint Detection Engineering, Monitoring, and Escalation?",
+    summary:
+      "This issue asks buyers whether their OT managed security scope actually covers setpoint detection engineering, monitoring, and escalation — or whether those gaps are left for the plant to find on its own.",
+    cover: "assets/images/books/msbg-news-issue-14-cover.jpg",
+    amazon: "https://link.amazon/B0ghKy2L8",
+  },
+  {
     issue: 13,
     dateRange: "Week of Oct 4–10, 2026",
     title:

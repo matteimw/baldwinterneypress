@@ -11,7 +11,10 @@
 
    Ordered newest release first (per Mark's "put latest on top"), using
    the "Prepared:" / event dates on each book's own KDP metadata sheet:
-     Hiring an AI Engineer          — added 2026-09-29 (newest)
+     AI Automation for Small Business Owners — added 2026-10-21 (newest,
+                                      Secure AI Field Guides series)
+     AI for Parents                 — added 2026-10-21 (Secure AI Field Guides)
+     Hiring an AI Engineer          — added 2026-09-29
      The Chatbot Crisis             — added 2026-09-23
      Manufactured Monsters          — prepared 2026-09-08
      The Machines That Let Themselves In — published within days of the
@@ -23,6 +26,24 @@
    ============================================================ */
 
 const BOOKS = [
+  {
+    title: "AI Automation for Small Business Owners",
+    author: "Mark W. Mattei",
+    description:
+      "A Security Practitioner's No-Code Guide to Using AI Assistants Safely. Part of the <i>Secure AI Field Guides</i> series: a plain-English map of where an AI assistant actually lives (your device, the provider's cloud, and the business apps it connects to), and how to automate real work in email, calendars, files, accounting and CRM without handing over the keys to your business.",
+    cover: "assets/images/books/ai-automation-small-business-cover.jpg",
+    icon: "⚙️",
+    amazon: "https://link.amazon/B0fzap6Wg",
+  },
+  {
+    title: "AI for Parents",
+    author: "Mark W. Mattei",
+    description:
+      "A Security Expert's Guide to Family Finances, School, Schedules, and Keeping Kids Safe. Part of the <i>Secure AI Field Guides</i> series: practical ways to let AI take on the family calendar, budgets, email and school paperwork, with the safeguards a career security professional puts in place first to protect the household and the kids.",
+    cover: "assets/images/books/ai-for-parents-cover.jpg",
+    icon: "🏠",
+    amazon: "https://link.amazon/B04p5kC7z",
+  },
   {
     title: "The Small Business Guide to Hiring an AI Engineer",
     author: "Mark W. Mattei",

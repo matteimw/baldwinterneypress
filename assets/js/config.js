@@ -21,6 +21,16 @@ const SITE_CONFIG = {
   // Leave mailerLiteFormId as "" to show a "Contact us" fallback instead.
   mailerLiteAccountId: "2635532",
   mailerLiteFormId: "eX66qv",
+
+  // ---- Share button (header + footer popup) ----
+  // siteUrl: the address shared when someone picks "Whole site".
+  // siteText: the message that goes with a whole-site share.
+  // hashtags: added to X posts only, comma-separated, no # signs.
+  share: {
+    siteUrl: "https://baldwinterneypress.com",
+    siteText: "Children's books, the Cyber Elementary curriculum and the Managed Security Buyers Guide from Baldwin Terney Press, a family-owned publisher",
+    hashtags: "BaldwinTerneyPress,ChildrensBooks,Cybersecurity",
+  },
 };
 
 const NAV_LINKS = [

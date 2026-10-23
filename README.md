@@ -125,3 +125,11 @@ then visit `http://localhost:8000`.
    exact records), the custom domain will take over.
 5. Until DNS is switched over, the site is safe to preview at the `github.io`
    URL without affecting the live GoDaddy site.
+
+## Share button and link previews
+
+Every page has a **Share** button at the right end of the menu and a **Share this site** button in the footer (both drawn by `assets/js/main.js`). The popup offers Facebook, X, LinkedIn, Instagram, TikTok, WhatsApp, Email and Copy link, plus a "This page / Whole site" switch on every page except Home.
+
+- Change the share message, site address or X hashtags in the `share:` block of `assets/js/config.js`.
+- Shared links carry `utm_source=<platform>&utm_medium=social&utm_campaign=share_button` so analytics can show where visitors came from.
+- Link-preview tags (the picture/title/description Facebook, LinkedIn and X show) are written into each page's `<head>` by `node tools/add-social-tags.js`. Run it again after adding a new page. To change the preview picture, replace `assets/images/social/share-card.png` (1200×630).

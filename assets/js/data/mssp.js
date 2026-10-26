@@ -1,3 +1,6 @@
+/* RETIRED 2026-10-25: no page loads this file anymore. The full issue list now
+   lives on https://www.baldwinterneyconsulting.com/books-articles.html and
+   managed-security-buyers.html links there. Kept only as a record. */
 /* ============================================================
    Managed Security Buyers Guide News — Volume 1
    By Mark W. Mattei, LTC (USA, Ret.)

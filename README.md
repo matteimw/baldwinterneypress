@@ -11,7 +11,7 @@ familiar.
 ```
 index.html                     Home page — both lines of business, MSS Buyers Guide teaser, About, Cyber Elementary cross-link, Contact
 books.html                     General catalog: the milk books + The "COMP"rehensive Guide
-managed-security-buyers.html   All issues of Managed Security Buyers Guide News + author bio
+managed-security-buyers.html   MSS Buyers Guide hub: series intro, link to all issues on BTC, author bio
 about.html                     Full About Us + founder note + Cyber Elementary
 contact.html                   Contact info (mailto — this is a static site, no server-side form)
 privacy-policy.html            Basic privacy policy + affiliate disclosure
@@ -23,29 +23,22 @@ assets/js/config.js            Contact email, address, social links, nav links
 assets/js/main.js              Renders the header/footer and the book/issue cards
 assets/js/data/
   books.js                     <- Add/edit general catalog books here (not the MSS Buyers Guide)
-  mssp.js                      <- Add/edit Managed Security Buyers Guide News issues here
+  mssp.js                      <- (retired) old issue list; no page loads it anymore
 assets/images/books/           Book cover images
 assets/images/site/            Author/founder photos
 assets/images/mascot/          Cyber Elementary's Choco mascot (used on the cross-promo strip)
 ```
 
-## Adding a new Managed Security Buyers Guide News issue
+## Managed Security Buyers Guide News issues
 
-Edit `assets/js/data/mssp.js`. Copy the block for the newest issue, paste it **above** it
-(newest issue goes first — that's also what puts the "Latest" pill on it), and
-fill in:
+New issues do **not** get added to this site. The full issue list is kept on the
+Baldwin Terney Consulting site (https://www.baldwinterneyconsulting.com/books-articles.html),
+which is updated weekly. `managed-security-buyers.html` is a static hub page with the
+series description, a "See all issues on Baldwin Terney Consulting" button, and the
+author bio, so it never needs a weekly edit.
 
-- `issue` — the issue number
-- `dateRange` — e.g. "Week of Sep 5–11, 2026"
-- `title` — the issue's headline
-- `summary` — a 2–4 sentence description (see existing issues for the tone —
-  specific news event, then the buyer question it raises)
-- `cover` — path to the cover image (drop the file in `assets/images/books/`
-  first, e.g. `msbg-news-issue-9-cover.jpg`)
-- `amazon` — your amzn.to link for that issue, used exactly as pasted
-
-No HTML editing required — the page renders the full list from this file
-automatically.
+`assets/js/data/mssp.js` (issues 1–14) is kept only as a record and no page loads it.
+The issue covers stay in `assets/images/books/` (Issue 1's cover is used on the hub page).
 
 ## Adding a general catalog book
 
